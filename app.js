@@ -5,11 +5,12 @@ function playNote(event) {
     // audio.play();
 }
 
-const pianoKey = document.getElementsByClassName("white");
-// console.log("piano const: ", piano)
+const pianoKey = document.getElementsByClassName("pianoKey");
+console.log("pianoKey const: ", pianoKey)
 
 Array.from(pianoKey).forEach(function (element) {
     element.addEventListener('click', playNote);
+    console.log("what is this?", element)
 });
 
 // $(".piano").addEventListener('click', playNote)
