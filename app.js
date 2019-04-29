@@ -8,7 +8,9 @@ function playNote(event) {
 
 $(".pianoKey").click(function () {
     console.log("i've been clicked");
-    console.log("you clicked me: ", this)
+    var keyId = $("polygon")[0].getAttribute("data-key");
+    console.log(keyId)
+    playNote(keyId)
 })
 
 // const pianoKey = document.getElementsByClassName("pianoKey");
