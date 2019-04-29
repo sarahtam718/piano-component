@@ -1,27 +1,30 @@
-function playNote(event) {
-    console.log("what is the id?", event)
-    // const audio = document.querySelector(`audio[data-key='${event.keyCode}']`);
-    console.log("---------playNote function-------")
-    // var audio = document.getElementById("audio");
-    // audio.play();
+// function playNote(event) {
+//     const audio = $('this');
+//     console.log("---------playNote function-------", audio)
+//     // var audio = document.getElementById("audio");
+//     // audio.play();
+// }
+
+// var audio = $("audio");
+
+const audio = $(`audio[data-key]`);
+console.log("audio: ", audio)
+
+function play(event) {
+    console.log("audio: ", event)
+    event.play();
 }
 
 $(".pianoKey").click(function () {
-    console.log("i've been clicked");
-    var keyId = $("polygon")[0].getAttribute("data-key");
-    console.log(keyId)
-    playNote(keyId)
+    // console.log("i've been clicked", this);
+    var keyData = $(this)[0];
+    return (keyData);
+    // playNote(keyData)
 })
 
-// const pianoKey = document.getElementsByClassName("pianoKey");
-// console.log("pianoKey const: ", pianoKey)
+// const audio = `${event}`;
+// console.log("---------playNote function-------", audio)
 
-// Array.from(pianoKey).forEach(function (element) {
-//     element.addEventListener('click', playNote);
-//     // console.log("what is this?", element)
-// });
-
-// $(".piano").addEventListener('click', playNote)
 
 // window.addEventListener('keydown', function (e) {
 //     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
