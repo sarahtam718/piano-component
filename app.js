@@ -7,7 +7,7 @@
 
 // var audio = $("audio");
 
-const audio = $(`audio[data-key]`);
+const audio = $("audio");
 console.log("audio: ", audio)
 
 function play(event) {
@@ -16,9 +16,8 @@ function play(event) {
 }
 
 $(".pianoKey").click(function () {
-    // console.log("i've been clicked", this);
-    var keyData = $(this)[0];
-    return (keyData);
+    var keyData = $(this)[0].id;
+    console.log(keyData);
     // playNote(keyData)
 })
 
