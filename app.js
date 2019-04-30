@@ -7,17 +7,20 @@
 
 // var audio = $("audio");
 
-const audio = $("audio");
-console.log("audio: ", audio)
+// const audio = $("audio");
+// console.log("audio: ", audio)
 
-function play(event) {
-    console.log("audio: ", event)
-    event.play();
-}
+// function play(event) {
+//     console.log("audio: ", event)
+//     event.play();
+// }
 
 $(".pianoKey").click(function () {
     var keyData = $(this)[0].id;
     console.log(keyData);
+    var audioClip = $("#c_octave1_audio")[0];
+    console.log("the sound: ", audioClip);
+    audioClip.play();
     // playNote(keyData)
 })
 
